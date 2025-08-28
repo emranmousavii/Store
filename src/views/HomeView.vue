@@ -1,6 +1,5 @@
 <template>
-    <Navbar></Navbar>
-    <TopMeno></TopMeno>
+
 
 
     <div class="lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm px-5  xl:max-w-screen-xl mx-auto">
@@ -30,8 +29,11 @@
       <Shopslider :stores="stores" ></Shopslider>
     </div>
     <Pajetitle :title="'مطالب خواندنی'"></Pajetitle>
+    <div class="flex flex-wrap ">
+      <Shopcard v-for="store in stores" :store="store" class="p-4"></Shopcard>
+
+    </div>
   </div>
-  <FooterView class="mt-10"></FooterView>
 </template>
 
 <script>
@@ -62,16 +64,20 @@ import Shopslider from '@/components/Shopslider.vue';
       }
   },
     mounted() {
-      this.axios.get(`https://fakestoreapi.com/products`).then((response) => {
-        // console.log(response.data[0]);
-        console.log(this.stores);
-        for (let i = 14; i < 20; i++) {
-          this.stores.push(response.data[i]) 
-        }
+      this.axios.get('http://127.0.0.1:8000/products').then((response) => {
+        console.log(response.data);
+        this.stores = response.data
+        this.$router.push({ name: 'store', params: { id: this.stores } })
+
+
+        // for (let i = 14; i < 20; i++) {
+        //   this.stores.push(response.data[i]) 
+        // }
         
       }).catch((error) => {
         
       })
+      
     },
   }
 </script>
