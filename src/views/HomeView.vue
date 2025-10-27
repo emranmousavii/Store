@@ -1,5 +1,5 @@
 <template>
-  <div class="max-[480px]:mx-15 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto ">
+  <div class="max-[480px]:mx-15 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto pt-10 ">
     <HeadSlid></HeadSlid>
 
     <Title :title="'پیشنهادات ویژه'" class="mt-5"></Title>

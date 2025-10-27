@@ -1,9 +1,9 @@
 <template>
   <div class=" w-1/3 sm:w-1/4 md:w-1/3 lg:w-1/4 xl:w-1/5">
     <div dir="rtl" 
-  class="p-3 hover:border-2 w-[220px]  border-transparent
+  class="p-3 hover:border-2 w-[210px]  border-transparent
    hover:border-primary transition-all
-         duration-300  h-full flex flex-col justify-between bg-zinc-800 rounded-box">
+         duration-300  h-full flex flex-col justify-between bg-neutral rounded-box">
          <router-link :to="{ name: 'store', params: { id: shop.id }}">
         
             <img :src="'http://127.0.0.1:8000' + shop.main_image" class="object-cover w-full h-full " alt="">

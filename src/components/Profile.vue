@@ -1,5 +1,5 @@
 <template>
-    <div class="p-2 xl:p-5">
+    <div class="p-2 xl:p-5   ">
         <div class=" border-b border-zinc-700 ">
             <div class="mb-5 flex items-center justify-between">
                 <div class="flex items-center gap-x-6">

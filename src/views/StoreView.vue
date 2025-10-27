@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-screen-xl mx-auto mt-20 mb-20">
+    <div class="max-w-screen-xl mx-auto mt-20 mb-20 pt-10 ">
         <HeadCard :stores="store" ></HeadCard>
     </div>
 </template>

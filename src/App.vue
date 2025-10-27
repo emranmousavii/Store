@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-linear-to-tl from-black to-emerald-950  h-full">
+  <div class=" h-full" :style="{ backgroundImage: 'var(--background-custom)' }">
     <Navbar class="fixed top-0 left-0 w-full z-50"></Navbar>
-    <TopMenu :class="['fixed top-20 left-0 w-full z-40',
+    <TopMenu :class="['fixed top-20 left-0 w-full  z-40',
       isScrollingDown ? 'opacity-0 -translate-y-full pointer-events-none' : 'opacity-100 translate-y-0 pointer-events-auto']"></TopMenu>
-    <router-view></router-view>
+    <router-view class="mt-28"></router-view>
     <Footer></Footer>
   </div>
 </template>

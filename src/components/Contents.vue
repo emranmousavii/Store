@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-wrap  sm:justify-between  mt-10 mb-20">
-        <div class="w-[300px] h-auto bg-zinc-900 rounded-box ">
+        <div class="w-[300px] h-auto bg-neutral rounded-box ">
                 <img src="/public/image/blog1.jpg" class="p-2 rounded-2xl" alt="">
                 <div class="p-2">
                     <h3 class="font-bold">مزایا و معایب گوشی‌های سری گلکسی S21</h3>
@@ -8,7 +8,7 @@
                 </div>
 
         </div>
-        <div class="w-[300px] h-auto bg-zinc-900 rounded-box ">
+        <div class="w-[300px] h-auto bg-neutral rounded-box ">
                 <img src="/public/image/blog1.jpg" class="p-2 rounded-2xl" alt="">
                 <div class="p-2">
                     <h3 class="font-bold">مزایا و معایب گوشی‌های سری گلکسی S21</h3>
@@ -16,7 +16,7 @@
                 </div>
 
         </div>
-        <div class="w-[300px] h-auto bg-zinc-900 rounded-box ">
+        <div class="w-[300px] h-auto bg-neutral rounded-box ">
                 <img src="/public/image/blog1.jpg" class="p-2 rounded-2xl" alt="">
                 <div class="p-2">
                     <h3 class="font-bold">مزایا و معایب گوشی‌های سری گلکسی S21</h3>
@@ -24,7 +24,7 @@
                 </div>
 
         </div>
-        <div class="w-[300px] h-auto bg-zinc-900 rounded-box ">
+        <div class="w-[300px] h-auto bg-neutral rounded-box ">
                 <img src="/public/image/blog1.jpg" class="p-2 rounded-2xl" alt="">
                 <div class="p-2">
                     <h3 class="font-bold">مزایا و معایب گوشی‌های سری گلکسی S21</h3>

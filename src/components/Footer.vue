@@ -1,5 +1,5 @@
 <template>
-    <div class="h-fit w-full bg-zinc-900 ">
+    <div class="h-fit w-full bg-neutral ">
        <div class="sm:max-w-screen-sm mx-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto">
         <div class="flex md:flex-row flex-col items-center justify-between gap-y-4  pt-10">
             <div class="flex md:flex-row flex-col  gap-x-10 order-2 gap-y-4">
@@ -19,14 +19,14 @@
 </button>
             </div>
         </div>
-        <div class=" h-fit md:h-20 gap-y-8 bg-black rounded-box mt-10 flex md:flex-row flex-col items-center justify-between p-5  ">
+        <div class=" h-fit md:h-20 gap-y-8 bg-accent rounded-box mt-10 flex md:flex-row flex-col items-center justify-between p-5  ">
             <div class="w-fit">
                 <span class="opacity-70">از جدیدترین تخفیف ها با خبر شوید</span>
             </div>
             <div class="relative lg:max-w-screen-sm mx-auto w-fit lg:w-full flex justify-center">
                 
                 <input placeholder="ثبت ایمیل" type="text" 
-                class="rounded-box p-3 focus:outline-none bg-zinc-900 w-fit sm:w-md md:w-90 lg:w-lg h-10 ">
+                class="rounded-box p-3 focus:outline-none bg-neutral w-fit sm:w-md md:w-90 lg:w-lg h-10 ">
                 <button class="btn absolute btn-primary h-8 shadow-none left-1  lg:left-17 top-1 text-white">ثبت</button>
             </div>
             <div class="w-fit flex gap-x-6 ">

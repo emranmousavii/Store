@@ -1,17 +1,17 @@
 <template>
-    <div class="mx-25 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto my-10">
+    <div class="mx-25 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto my-10 pt-10">
         <div class="md:grid md:grid-cols-6   lg:grid-cols-4 flex justify-between">
             <div class="md:col-span-2  lg:col-span-1  h-fit md:h-full md:w-full ">
 
                     <div class="xl:w-[328px]  sm:w-75 md:w-fit rounded-box h-12 mb-5  items-center 
-                 justify-between   md:items-start md:flex-col md:h-fit p-2 bg-zinc-900 ">
+                 justify-between   md:items-start md:flex-col md:h-fit p-2 bg-neutral ">
                     <div class=" md:flex md:justify-between   p-2">
                         <span class="text-md md:text-xl ">فیلتر ها</span>
                         <span class="text-primary hidden md:block">حذف همه</span>
                     </div>
                     <div class="hidden md:block">
                         <div class="mx-5">
-                        <input type="text" placeholder="جستجو در بین نتایج..." class="bg-black w-full mt-5 pr-2 rounded-box h-12">
+                        <input type="text" placeholder="جستجو در بین نتایج..." class="bg-accent w-full mt-5 pr-2 rounded-box h-12">
                     </div>
                     <div class="mt-5 mx-2">
                         <span class="text-md  ">محدودیت قیمت</span>
@@ -71,8 +71,9 @@
 
                 </div>
             </div>
-            <div class="md:col-span-4  lg:col-span-3 md:px-8  sm:w-fit space-y-6  md:overflow-scroll h-fit md:h-[800px]">
-                <div class="bg-zinc-900 p-3 rounded-box  sm:w-75 md:w-full   flex items-center gap-x-4 lg:gap-x-10">
+            <div class="md:col-span-4  lg:col-span-3 md:px-8  sm:w-fit space-y-6  md:overflow-y-scroll scrollbar-hide 
+            md:overflow-x-hidden h-fit md:h-[800px]">
+                <div class="bg-neutral p-3 rounded-box  sm:w-75 md:w-full xl:w-full  flex items-center gap-x-4 lg:gap-x-10">
                     <div class="lg:textarea-lg text-sm">  
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" class="size-6 inline">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />

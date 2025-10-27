@@ -1,6 +1,6 @@
 <template>
-    <div class=" bg-zinc-900 ">
-<div class="flex  flex-wrap md:flex-nowrap md:flex-row justify-between py-2 px-2 items-center  bg-zinc-900 sm:max-w-screen-sm mx-17 sm:mx-auto md:max-w-full">
+    <div class=" bg-neutral ">
+<div class="flex  flex-wrap md:flex-nowrap md:flex-row justify-between py-2 px-2 items-center  bg-neutral sm:max-w-screen-sm mx-17 sm:mx-auto md:max-w-full">
     <div tabindex="0" role="button" class="btn btn-ghost btn-circle md:hidden  navbar-center pr-5 lg:hidden order-1 ">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
       </div>
@@ -8,12 +8,12 @@
             <img src="/public/logo.svg" class="w-full h-full" alt="">
         </div>
 
-        <div class="relative mx-auto w-full md:w-xl order-2 md:order-none">
+        <div class="relative mx-auto w-full md:w-xl order-2 md:order-none text-success">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" class="size-6 absolute top-3 right-2">
   <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 </svg>
 
-            <input type="text" placeholder="جستجو کنید..." class="bg-black text-white w-full h-12 rounded-box pr-10">
+            <input type="text" placeholder="جستجو کنید..." class="bg-accent text-success w-full h-12 rounded-box pr-10">
 
         </div>
         <div class="flex gap-x-4 order-1 md:order-none pr-4   ">
@@ -25,7 +25,7 @@
 
             </span>
 </button>
-<ul class="dropdown p-2 space-y-7 w-52 rounded-box bg-zinc-900 border-t-2 border-t-primary shadow-sm "
+<ul class="dropdown p-2 space-y-7 w-52 rounded-box bg-neutral border-t-2 border-t-primary shadow-sm "
   popover id="popover-1">
     <li class="cursor-pointer hover:text-primary">
         <router-link :to="{name:'dashboard'}">
@@ -92,18 +92,32 @@
   </li>
 </ul>
  
-            <span class="hidden md:block">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 inline">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-</svg>
+            <div class="hidden md:block space-x-2 ">
+              <div class="flex items-center">
+                <button v-if="myTheme == 'light'" class=" btn-sm md:btn-md btn-circle" @click="changeTheme('dark')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4 md:size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+            </button>
+            <button v-else class=" btn-sm md:btn-md btn-circle" @click="changeTheme('light')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4 md:size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+            </button>
+              </div>
 
-            </span>
-            <span>
+
+            </div>
+            <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 inline">
   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
 </svg>
 
-            </span>
+            </div>
 
         </div>
 </div>
@@ -112,7 +126,30 @@
 </template>
 
 <script>
-    export default {
+export default {
+      data() {
+        return {
+          myTheme: 'light'
+
+        }
+  },
+  mounted() {
+        if (localStorage.theme) {
+            this.myTheme = localStorage.theme
+            this.changeTheme(localStorage.theme);
+        }
+    },
+
+    methods: {
+        changeTheme(theme) {
+            this.myTheme = localStorage.theme = theme;
+            document.querySelector('html').setAttribute('data-theme', theme)
+        },
+        doSearch() {
+            this.$router.push({ name: 'search', params: { query: this.search } })
+            document.querySelector("#closeSearch").click()
+        }
+    }
         
     }
 </script>
