@@ -1,6 +1,6 @@
 <template>
-    <div class="mx-25 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto my-10 pt-10">
-        <div class="md:grid md:grid-cols-6   lg:grid-cols-4 flex justify-between">
+    <div class="mx-12 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto my-10 pt-10">
+        <div class="md:grid md:grid-cols-6   lg:grid-cols-4 sm:flex justify-between">
             <div class="md:col-span-2  lg:col-span-1  h-fit md:h-full md:w-full ">
 
                     <div class="xl:w-[328px]  sm:w-75 md:w-fit rounded-box h-12 mb-5  items-center 
@@ -91,7 +91,7 @@
                  </div>
                 </div>
                 <div class="hidden md:block">
-                    <div class=" flex flex-wrap justify-between gap-x-2 gap-y-4  ">
+                    <div class=" flex flex-wrap sm:justify-around md:justify-between  gap-x-2 gap-y-4  ">
       <Card v-for="shop in shops" :shop="shop" class="" ></Card>
 
 
@@ -103,7 +103,7 @@
             
         </div>
        <div class="block md:hidden">
-        <div class=" flex flex-wrap justify-between  gap-x-2 gap-y-4    ">
+        <div class=" flex flex-wrap   md:justify-between  gap-x-15 justify-center sm:justify-start gap-y-4    ">
       <Card v-for="shop in shops" :shop="shop" class="" ></Card>
 
 

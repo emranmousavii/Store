@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center  mb-4 relative w-full">
-        <div class="bg-zinc-900 h-60 px-8 w-full rounded-box flex flex-col justify-center items-center max-w-screen-sm md:max-w-screen-md mx-auto">
+        <div class="bg-neutral h-60 px-8 w-full rounded-box flex flex-col justify-center items-center max-w-screen-sm md:max-w-screen-md mx-auto">
 
             <div class="relative  ">
                 <div class="absolute z-40 w-8 h-8 bg-primary  rounded-full flex justify-center items-center   ">
@@ -38,7 +38,7 @@
            
         </div>
         <div  v-if="focus" :class="['absolute w-full  h-screen z-50',]">
-            <div class="flex justify-between p-2 items-center border-b border-zinc-700 pb-5  lg:hidden bg-zinc-900">
+            <div class="flex justify-between p-2 items-center border-b border-zinc-700 pb-5  lg:hidden bg-neutral">
             <span>منوی پنل کاربری</span>
             <span @click="doexit()" class="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

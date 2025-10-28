@@ -4,9 +4,9 @@
     <div tabindex="0" role="button" class="btn btn-ghost btn-circle md:hidden  navbar-center pr-5 lg:hidden order-1 ">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
       </div>
-        <div class="navbar w-[200px] h-[56px] order-1 md:order-none">
+        <router-link :to="{ name: 'home' }" class="navbar w-[200px] h-[56px] order-1 md:order-none">
             <img src="/public/logo.svg" class="w-full h-full" alt="">
-        </div>
+        </router-link>
 
         <div class="relative mx-auto w-full md:w-xl order-2 md:order-none text-success">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" class="size-6 absolute top-3 right-2">
