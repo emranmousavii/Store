@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-12 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto my-10 pt-10">
+    <div class="mx-12 sm:max-w-screen-sm md:max-w-screen-md  lg:max-w-screen-lg xl:max-w-screen-xl  sm:mx-auto my-10 pt-10">
         <div class="md:grid md:grid-cols-6   lg:grid-cols-4 sm:flex justify-between">
             <div class="md:col-span-2  lg:col-span-1  h-fit md:h-full md:w-full ">
 
@@ -7,51 +7,22 @@
                  justify-between   md:items-start md:flex-col md:h-fit p-2 bg-neutral ">
                     <div class=" md:flex md:justify-between   p-2">
                         <span class="text-md md:text-xl ">فیلتر ها</span>
+                        <!-- <Category class="block md:hidden w-full z-50"></Category> -->
+
+
                         <span class="text-primary hidden md:block">حذف همه</span>
                     </div>
+
                     <div class="hidden md:block">
-                        <div class="mx-5">
+
+                      <div class="mx-5">
                         <input type="text" placeholder="جستجو در بین نتایج..." class="bg-accent w-full mt-5 pr-2 rounded-box h-12">
                     </div>
-                    <div class="mt-5 mx-2">
-                        <span class="text-md  ">محدودیت قیمت</span>
-                        <!-- <Price></Price> -->
+                  
+                    <Category class="hidden md:block"></Category>
 
-  <div class="mt-5">
-    <div tabindex="0" class="collapse collapse-arrow  border-base-300 border">
-  <div class="collapse-title font-semibold">دسته بندی ها</div>
-  <div class="collapse-content text-md flex  flex-col gap-y-4">
-    <span>    دسته بندی 1
-    </span>
-    <span>    دسته بندی 1
-    </span>
-    <span>    دسته بندی 1
-    </span>
-  </div>
-</div>
-    <div tabindex="0" class="collapse collapse-arrow  border-base-300 border">
-  <div class="collapse-title font-semibold ">دسته بندی ها</div>
-  <div class="collapse-content text-md flex  flex-col gap-y-4">
-    <span>    دسته بندی 1
-    </span>
-    <span>    دسته بندی 1
-    </span>
-    <span>    دسته بندی 1
-    </span>
-  </div>
-</div>
-    <div tabindex="0" class="collapse collapse-arrow  border-base-300 border">
-  <div class="collapse-title font-semibold">دسته بندی ها</div>
-  <div class="collapse-content text-md flex  flex-col gap-y-4">
-    <span>    دسته بندی 1
-    </span>
-    <span>    دسته بندی 1
-    </span>
-    <span>    دسته بندی 1
-    </span>
-  </div>
-</div>
-  </div>
+                    <div class="mt-5 mx-2">
+
   <div class="mt-5 space-y-4">
     <div class="flex justify-between ">
         <p class="text-sm font-bold">فقط کالا های موجود</p>
@@ -68,7 +39,6 @@
   </div>
                     </div>
                     </div>
-
                 </div>
             </div>
             <div class="md:col-span-4  lg:col-span-3 md:px-8  sm:w-fit space-y-6  md:overflow-y-scroll scrollbar-hide 
@@ -116,21 +86,27 @@
 <script>
 import Btn from '@/components/Btn.vue';
 import Card from '@/components/Card.vue';
+import Category from '@/components/Category.vue';
 import Price from '@/components/Price.vue';
 
 export default {
     components: {
     Card,
     Btn,
-        Price
-    },
+    Price,
+    Category
+    
+  },
+    
     data() {
         return {
            
-            shops: [],
+          shops: [],
+            
      
         }
-    },
+  },
+    
     mounted() {
             this.axios.get('http://127.0.0.1:8000/products').then((response) => {
                 // this.shops = response.data
