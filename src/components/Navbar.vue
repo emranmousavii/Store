@@ -1,12 +1,37 @@
 <template>
     <div class=" bg-neutral ">
-<div class="flex  flex-wrap md:flex-nowrap md:flex-row justify-between py-2 px-2 items-center  bg-neutral sm:max-w-screen-sm mx-17 sm:mx-auto md:max-w-full">
-    <div tabindex="0" role="button" class="btn btn-ghost btn-circle md:hidden  navbar-center pr-5 lg:hidden order-1 ">
+<div class="flex  flex-wrap md:flex-nowrap md:flex-row justify-between py-2 px-2 items-center  bg-neutral sm:max-w-screen-sm 
+ sm:mx-auto md:max-w-full">
+    <div @click="doclick()" tabindex="0" role="button" class="btn btn-ghost btn-circle md:hidden  navbar-center pr-5 lg:hidden order-1 ">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
       </div>
-        <router-link :to="{ name: 'home' }" class="navbar w-[200px] h-[56px] order-1 md:order-none">
+      <div v-if="focus" class="block md:hidden overflow-y-auto scrollbar-hide w-80 fixed inset-0 z-50 bg-neutral text-success
+       top-0   right-0">
+        <div class="flex justify-between mt-2 items-center border-b mb-5 border-zinc-800 w-80">
+            <div>
+                <router-link :to="{ name: 'home' }" class="navbar w-[150px] h-[56px] order-1 md:order-none">
             <img src="/public/logo.svg" class="w-full h-full" alt="">
         </router-link>
+            </div>
+            <div>
+                <span @click="doexit()" class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+            </span>
+
+            </div>
+        </div>
+        <MenuHm ></MenuHm>
+
+      </div>
+      <router-link
+  :to="{ name: 'home' }"
+  class="navbar w-40 sm:w-40 md:w-40 h-auto order-1 md:order-none flex-shrink-0"
+>
+  <img src="/public/logo.svg" class="w-full h-auto" alt="logo">
+</router-link>
 
         <div class="relative mx-auto w-full md:w-xl order-2 md:order-none text-success">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" class="size-6 absolute top-3 right-2">
@@ -112,10 +137,13 @@
 
 
             </div>
-            <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 inline">
+            <div class="flex items-center ">
+<div class="">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" 
+                class="size-6 inline ">
   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
 </svg>
+</div>
 
             </div>
 
@@ -126,10 +154,17 @@
 </template>
 
 <script>
+import MenuHm from './menuHm.vue';
+
+
 export default {
+    components: {
+        MenuHm
+    },
       data() {
         return {
-          myTheme: 'light'
+            myTheme: 'light',
+          focus:false
 
         }
   },
@@ -148,7 +183,14 @@ export default {
         doSearch() {
             this.$router.push({ name: 'search', params: { query: this.search } })
             document.querySelector("#closeSearch").click()
+        },
+        doclick() {
+            this.focus=true
+        },
+        doexit() {
+           this.focus=false 
         }
+
     }
         
     }

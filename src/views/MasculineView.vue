@@ -7,7 +7,6 @@
                  justify-between   md:items-start md:flex-col md:h-fit p-2 bg-neutral ">
                     <div class=" md:flex md:justify-between   p-2">
                         <span class="text-md md:text-xl ">فیلتر ها</span>
-                        <!-- <Category class="block md:hidden w-full z-50"></Category> -->
 
 
                         <span class="text-primary hidden md:block">حذف همه</span>
@@ -73,7 +72,7 @@
             
         </div>
        <div class="block md:hidden">
-        <div class=" flex flex-wrap   md:justify-between  gap-x-15 justify-center sm:justify-start gap-y-4    ">
+        <div class=" flex flex-wrap   md:justify-between  gap-x-10 w-3/3 gap-y-4    ">
       <Card v-for="shop in shops" :shop="shop" class="" ></Card>
 
 

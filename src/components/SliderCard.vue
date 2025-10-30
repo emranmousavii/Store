@@ -11,11 +11,19 @@
         spaceBetween: 5,
       },
       '380': {
-        slidesPerView: 1.5,
-        spaceBetween: 80,
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
+      '480': {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      '540': {
+        slidesPerView: 3,
+        spaceBetween: 10,
       },
       '640': {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 10,
       },
       '768': {
@@ -47,7 +55,7 @@
     class="mySwiper"
   >
     <swiper-slide v-for="shop in shop">
-      <Card :shop="shop"></Card>
+      <Card class="" :shop="shop"></Card>
     </swiper-slide>
 
   </swiper>

@@ -8,8 +8,10 @@
   
 
     <Title :title="'جدیدترین محصولات'" class="mt-8"></Title>
-    <div class="mt-5 flex flex-wrap justify-around gap-x-2 gap-y-4 ">
+    <div class="mt-5 flex flex-wrap justify-between gap-x-2 gap-y-4 ">
       <Card v-for="shop in shops" :shop="shop" class="hidden sm:block" ></Card>
+      <SliderCard :shop="shops" class="mt-10 block sm:hidden"></SliderCard>
+
 
 
     </div>

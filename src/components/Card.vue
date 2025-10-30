@@ -1,7 +1,7 @@
 <template>
-  <div class="  sm:w-1/4 md:w-1/3 lg:w-1/4 xl:w-1/5">
+  <div class="  ">
     <div dir="rtl" 
-  class="p-3 hover:border-2  sm:w-[200px]  border-transparent
+  class="p-3 hover:border-2  sm:w-[180px]  border-transparent
    hover:border-primary transition-all
          duration-300  h-full flex flex-col justify-between bg-neutral rounded-box">
          <router-link :to="{ name: 'store', params: { id: shop.id }}">
