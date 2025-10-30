@@ -8,13 +8,16 @@
   
 
     <Title :title="'جدیدترین محصولات'" class="mt-8"></Title>
-    <div class="mt-5 flex flex-wrap justify-between gap-x-2 gap-y-4 ">
-      <Card v-for="shop in shops" :shop="shop" class="hidden sm:block" ></Card>
-      <SliderCard :shop="shops" class="mt-10 block sm:hidden"></SliderCard>
-
-
+    <div class="hidden sm:block">
+      <div class="mt-5 grid gap-4 w-full  grid-cols-3 justify-items-center  md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+  <Card  v-for="shop in shops" :key="shop.id" :shop="shop"/>
+</div>
+    </div>
+    <div class="block sm:hidden">
+      <SliderCard :shop="shops" class="mt-10 hidden"></SliderCard>
 
     </div>
+
 
     <Title :title="'پرفروش ترین محصولات'" class="mt-8"></Title>
     <SliderCard :shop="shops" class="mt-10"></SliderCard>
