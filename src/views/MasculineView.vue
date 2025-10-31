@@ -61,7 +61,7 @@
                 </div>
                 <div class="hidden md:block">
                     <div class=" flex flex-wrap sm:justify-around md:justify-between  gap-x-2 gap-y-4  ">
-      <Card v-for="shop in shops" :shop="shop" class="" ></Card>
+      <Card  v-for="shop in shops" :shop="shop" class="hidden sm:block" ></Card>
 
 
     </div>
@@ -71,9 +71,18 @@
      
             
         </div>
-       <div class="block md:hidden">
+       <div class=" hidden sm:block md:hidden">
         <div class=" flex flex-wrap   md:justify-between  gap-x-10 w-3/3 gap-y-4    ">
       <Card v-for="shop in shops" :shop="shop" class="" ></Card>
+
+
+
+    </div>
+       </div>
+       <div class="block sm:hidden ">
+        <div class=" flex flex-wrap   md:justify-between  gap-x-10 w-3/3 gap-y-4    ">
+      <Card2 v-for="shop in shops" :shop="shop" class="" ></Card2>
+
 
 
     </div>
@@ -85,12 +94,14 @@
 <script>
 import Btn from '@/components/Btn.vue';
 import Card from '@/components/Card.vue';
+import Card2 from '@/components/card2.vue';
 import Category from '@/components/Category.vue';
 import Price from '@/components/Price.vue';
 
 export default {
     components: {
     Card,
+    Card2,
     Btn,
     Price,
     Category
