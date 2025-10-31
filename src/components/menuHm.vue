@@ -91,12 +91,16 @@
                 </div>
                 <div class="w-full flex justify-center bg-zinc-800 h-0.5"></div>
             </div>
-            <div class="mt-10 flex gap-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-</svg>
+            <div class="mt-10 flex gap-x-2 border-b border-zinc-700 pb-10">
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 border">
+      <div class="collapse-title font-semibold bg-neutral w-full ">همه</div>
+      <div class="collapse-content text-md flex flex-col gap-y-4 bg-neutral w-full ">
+        <router-link :to="{name:'masculine'}">مردانه</router-link>
+        <router-link :to="{name:'masculine'}">زنانه</router-link>
+        <router-link :to="{name:'masculine'}">بچگانه</router-link>
+      </div>
+    </div>
 
-            <span>صفحه اصلی</span>
             </div>
         </div>
       </div>
