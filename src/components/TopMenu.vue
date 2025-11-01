@@ -13,7 +13,7 @@
    </div>
     <div
       class="absolute  mt-2 w-48 bg-zinc-900 text-white rounded-md shadow-lg opacity-0  z-50
-       group-hover:opacity-100 transition"
+       group-hover:opacity-100 transition "
     >
       <ul class="py-2 text-white">
         <li class="px-4 py-2  cursor-pointer ">

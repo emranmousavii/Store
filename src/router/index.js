@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import StoreView from '@/views/StoreView.vue'
 import MasculineView from '@/views/MasculineView.vue'
 import DashboardView from '@/views/DashboardView.vue'
+import PanelAdminveiw from '@/views/PanelAdminveiw.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardView,
+    },
+    {
+      path: '/panelAdmin',
+      name: 'panelAdmin',
+      component: PanelAdminveiw,
     },
 
   ],
